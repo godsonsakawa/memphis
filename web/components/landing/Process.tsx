@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { SearchCheck, BarChart3, LineChart, TrendingUp } from "lucide-react";
-import React from "react";
 
 const processSteps = [
   {
@@ -37,80 +36,95 @@ export function ProcessSection() {
   const isInView = useInView(ref, { once: true, margin: "-10%" });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 bg-black relative">
-      {/* Simple border elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-neutral-800"></div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-neutral-800"></div>
-      
-      <div className="container mx-auto px-4 lg:px-8">
-        {/* Refined section header */}
-        <div className="max-w-2xl mx-auto text-center mb-20">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7 }}
-            className="text-blue-400 uppercase tracking-widest text-sm font-medium mb-4"
+    <section ref={ref} className="py-24 relative z-10">
+      <div className="container mx-auto px-4">
+        {/* Premium separator */}
+        <div className="mb-24">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        </div>
+        
+        {/* Section header */}
+        <div className="max-w-5xl mx-auto text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium mb-8"
           >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2"></span>
             Our Methodology
-          </motion.p>
+          </motion.div>
           
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight"
+            className="text-3xl md:text-4xl font-bold mb-6 text-white"
           >
-            A structured approach to <span className="font-medium">exceptional results</span>
+            A structured approach to exceptional results
           </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-lg text-white/70"
+          >
+            Our proven methodology ensures consistent delivery of high-quality outcomes for every client engagement.
+          </motion.p>
         </div>
         
-        {/* Premium Process Steps Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          {processSteps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <motion.div 
-                key={step.number}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 + (index * 0.15) }}
-                className="flex"
-              >
-                <div className="mr-6">
-                  <div className="w-14 h-14 border border-neutral-800 rounded-full flex items-center justify-center">
-                    <span className="font-light text-xl text-neutral-400">{step.number}</span>
+        {/* Process Timeline */}
+        <div className="relative">
+          {/* Vertical timeline line */}
+          <div className="absolute top-0 bottom-0 left-[30px] md:left-1/2 w-px bg-gradient-to-b from-primary/50 via-white/10 to-primary/50 md:transform md:-translate-x-px"></div>
+          
+          <div className="relative">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              const isEven = index % 2 === 0;
+              
+              return (
+                <div key={step.number} className="mb-16 last:mb-0">
+                  <div className="flex md:block">
+                    {/* Timeline node */}
+                    <div className="flex-none relative z-10">
+                      <motion.div
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={isInView ? { scale: 1, opacity: 1 } : {}}
+                        transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                        className="w-[60px] h-[60px] rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center relative left-0 md:left-1/2 md:transform md:-translate-x-1/2"
+                      >
+                        <span className="text-xl font-light text-primary">{step.number}</span>
+                      </motion.div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-grow pl-6 md:pl-0">
+                      <div className={`md:w-1/2 ${isEven ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
+                        <motion.div
+                          initial={{ opacity: 0, y: 20, x: isEven ? 20 : -20 }}
+                          animate={isInView ? { opacity: 1, y: 0, x: 0 } : {}}
+                          transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
+                        >
+                          <div className="flex items-center mb-4">
+                            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mr-4">
+                              <Icon className="w-5 h-5 text-primary" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                          </div>
+                          
+                          <p className="text-white/70">{step.description}</p>
+                        </motion.div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <div>
-                  <div className="flex items-center mb-3">
-                    <Icon size={16} className="text-blue-400 mr-2" strokeWidth={2} />
-                    <h3 className="text-xl font-medium text-white">{step.title}</h3>
-                  </div>
-                  
-                  <p className="text-neutral-400 leading-relaxed">{step.description}</p>
-                  
-                  {/* Subtle divider */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden md:block h-12 w-px bg-neutral-800 absolute ml-7 mt-6"></div>
-                  )}
-                </div>
-              </motion.div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        
-        {/* Premium Note */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-20 max-w-2xl mx-auto text-center"
-        >
-          <p className="text-neutral-500 text-sm italic">
-            Each process is tailored to the specific needs of your business, ensuring optimal alignment with your strategic objectives.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

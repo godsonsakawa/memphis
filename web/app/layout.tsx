@@ -8,38 +8,130 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Optimize font display
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap", // Optimize font display
 });
 
+// Base URL for canonical links and absolute URLs
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://memphiscapital.co.ke";
+
+// Enhanced metadata with comprehensive SEO
 export const metadata: Metadata = {
-  title: "Memphis Capital | Business Strategy & Capital Sourcing",
-  description: "Advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive growth.",
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Memphis Capital | Premium Financial Advisory & Capital Sourcing",
+    template: "%s | Memphis Capital" // Template for nested pages
+  },
+  description: "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive sustainable growth across East Africa.",
+  applicationName: "Memphis Capital",
+  authors: [{ name: "Memphis Capital", url: baseUrl }],
+  generator: "Next.js",
+  keywords: [
+    "Financial Advisory", 
+    "Capital Sourcing", 
+    "Business Strategy", 
+    "Market Research", 
+    "Investment", 
+    "Transaction Advisory", 
+    "East Africa", 
+    "Kenya",
+    "Deal Structuring",
+    "Funding",
+    "Financial Modelling"
+  ],
+  creator: "Memphis Capital",
+  publisher: "Memphis Capital",
+  formatDetection: {
+    email: false,
+    telephone: false,
+    address: false,
+  },
+  category: "finance",
+  
+  // OpenGraph metadata for rich sharing on social media
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://memphiscapital.co.ke",
+    url: baseUrl,
     siteName: "Memphis Capital",
-    title: "Memphis Capital | Business Strategy & Capital Sourcing",
-    description: "Advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive growth.",
+    title: "Memphis Capital | Premium Financial Advisory & Capital Sourcing",
+    description: "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive sustainable growth across East Africa.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/memphislogo.png", // Using your logo
         width: 1200,
         height: 630,
-        alt: "Memphis Capital"
+        alt: "Memphis Capital - Premium Financial Advisory",
+        type: "image/png"
       }
-    ]
+    ],
   },
+  
+  // Twitter specific metadata
   twitter: {
     card: "summary_large_image",
-    title: "Memphis Capital | Business Strategy & Capital Sourcing",
-    description: "Advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive growth.",
-    images: ["/og-image.jpg"]
-  }
+    title: "Memphis Capital | Premium Financial Advisory Services",
+    description: "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research across East Africa.",
+    images: ["/memphislogo.png"], // Using your logo
+    creator: "@memphiscapital",
+    site: "@memphiscapital"
+  },
+  
+  // Additional verification for search consoles (add your IDs if available)
+  verification: {
+    // google: "your-google-site-verification",
+    // yandex: "your-yandex-verification",
+    // bing: "your-bing-verification",
+  },
+  
+  // Icons
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#D4AF37', // Gold color to match your brand
+      },
+    ],
+  },
+  
+  // Web manifests and app configurations
+  manifest: '/site.webmanifest',
+  
+  // Robots directives
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
+    },
+  },
+  
+  // Alternate languages (uncomment and modify if you have multiple language versions)
+  // alternates: {
+  //   canonical: baseUrl,
+  //   languages: {
+  //     'en-US': `${baseUrl}/en-US`,
+  //     'sw-KE': `${baseUrl}/sw-KE`,
+  //   },
+  // },
 };
 
 export default function RootLayout({
@@ -49,6 +141,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Additional meta tags for SEO */}
+        <meta name="geo.region" content="KE" /> {/* Kenya */}
+        <meta name="geo.placename" content="Nairobi" />
+        <link rel="canonical" href={baseUrl} />
+        
+        {/* Preconnect to essential domains to improve load performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Facebook Domain Verification if needed */}
+        {/* <meta name="facebook-domain-verification" content="your-verification-code" /> */}
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} antialiased min-h-screen bg-background font-sans`}
       >
@@ -64,6 +169,41 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
+        
+        {/* Structured data for rich search results */}
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Memphis Capital",
+              "url": baseUrl,
+              "logo": `${baseUrl}/memphislogo.png`,
+              "sameAs": [
+                "https://www.linkedin.com/company/memphis-capital",
+                "https://twitter.com/memphiscapital"
+                // Add other social profiles here
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+254-733-900-225",
+                "contactType": "customer service",
+                "areaServed": "East Africa",
+                "availableLanguage": ["English", "Swahili"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Western Heights",
+                "addressLocality": "Westlands",
+                "addressRegion": "Nairobi",
+                "postalCode": "",
+                "addressCountry": "KE"
+              },
+              "description": "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive sustainable growth across East Africa."
+            })
+          }}
+        />
       </body>
     </html>
   );
