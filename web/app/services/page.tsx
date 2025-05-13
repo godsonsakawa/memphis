@@ -29,7 +29,7 @@ const services = [
     tagline: "Expert guidance for navigating complex business landscapes",
     description:
       "Our strategic advisory services provide senior-level expertise to help organizations navigate critical inflection points with confidence and clarity.",
-    image: "https://img.freepik.com/free-photo/plants-with-coins-stacked-dirt-banknote_23-2148803946.jpg?t=st=1746706783~exp=1746710383~hmac=adf7b3c75b8489aa572f894954565f88f5d29643dadd3b135ebf6891c21f1e96&w=1380",
+    image: "/person-office-analyzing-checking-finance-graphs.jpg",
     gradient: "from-primary/20 to-indigo-600/10",
     featured: true,
     items: [
@@ -61,7 +61,7 @@ const services = [
     tagline: "Capital optimization and financial excellence",
     description:
       "Our comprehensive financial services ensure your business has the capital structure, reporting systems, and analytical tools needed to optimize performance and drive growth.",
-    image: "https://img.freepik.com/free-photo/3d-background-children-with-castle_23-2150499381.jpg?t=st=1746706686~exp=1746710286~hmac=958a5e7365b53c76814372bec2ffc97ab73587c4698498296dffa143196fd208&w=1800",
+    image: "/front-view-two-stacks-coins-with-jar-plants.jpg",
     gradient: "from-blue-600/20 to-cyan-600/10",
     featured: false,
     items: [
@@ -93,7 +93,7 @@ const services = [
     tagline: "Insights that drive strategic advantage",
     description:
       "Our research team delivers actionable intelligence that illuminates market opportunities, competitive landscapes, and consumer insights to power data-driven decision making.",
-    image: "https://img.freepik.com/free-photo/front-view-stacked-coins-with-dirt-plant_23-2148803904.jpg?t=st=1746706549~exp=1746710149~hmac=eb14c97ae57770c948a0348e74d1c38a1cec4972fd80255c968e96237a5b335f&w=900",
+    image: "close-up-pen-with-tablet-table.jpg",
     gradient: "from-violet-600/20 to-purple-600/10",
     featured: false,
     items: [

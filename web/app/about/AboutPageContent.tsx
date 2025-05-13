@@ -108,7 +108,7 @@ export default function AboutPageContent() {
               <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-amber-900/20 rounded-2xl blur-xl"></div>
               <div className="relative h-full w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl shadow-amber-900/10">
                 <Image
-                  src="https://img.freepik.com/free-photo/abstract-business-people-city-buildings_53876-139657.jpg?t=st=1746706321~exp=1746709921~hmac=be7cd72171c0d958e35eb734bba0c99d8c896f74713b37f7807662f6543d563b&w=1800"
+                  src="/black-businessman-using-computer-laptop.jpg"
                   alt="Memphis Capital Team"
                   width={600}
                   height={600}
@@ -216,7 +216,7 @@ export default function AboutPageContent() {
               <div className="absolute -inset-4 bg-gradient-to-br from-amber-600/10 to-amber-900/10 rounded-2xl blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                 <Image
-                  src="https://img.freepik.com/free-photo/front-view-stacked-coins-with-dirt-plant_23-2148803904.jpg?t=st=1746706549~exp=1746710149~hmac=eb14c97ae57770c948a0348e74d1c38a1cec4972fd80255c968e96237a5b335f&w=900"
+                  src="/beautiful-bildings-with-lights-hong-kong.jpg"
                   alt="Memphis Capital Office"
                   width={800}
                   height={600}
@@ -336,24 +336,26 @@ export default function AboutPageContent() {
           </div>
 
           <Tabs defaultValue="strategic" className="w-full">
-            <TabsList className="grid grid-cols-3 md:grid-cols-5 mb-8 bg-slate-900/50 p-1 rounded-lg border border-slate-800">
+            <TabsList className="w-full grid grid-cols-3 mb-8 bg-slate-900/50 p-2 rounded-lg border border-slate-800 gap-1 md:gap-0 md:grid-cols-5">
               {[
-                { value: "strategic", label: "Strategic Investment", icon: <BarChart4 className="w-4 h-4 mr-2" /> },
-                { value: "success", label: "Proven Success", icon: <TrendingUp className="w-4 h-4 mr-2" /> },
-                { value: "expertise", label: "Industry Expertise", icon: <Briefcase className="w-4 h-4 mr-2" /> },
-                { value: "solutions", label: "Tailored Solutions", icon: <Lightbulb className="w-4 h-4 mr-2" /> },
-                { value: "network", label: "Global Network", icon: <Globe className="w-4 h-4 mr-2" /> },
+                { value: "strategic", label: "Strategic Investment", icon: <BarChart4 className="w-5 h-5" /> },
+                { value: "success", label: "Proven Success", icon: <TrendingUp className="w-5 h-5" /> },
+                { value: "expertise", label: "Industry Expertise", icon: <Briefcase className="w-5 h-5" /> },
+                { value: "solutions", label: "Tailored Solutions", icon: <Lightbulb className="w-5 h-5" /> },
+                { value: "network", label: "Global Network", icon: <Globe className="w-5 h-5" /> },
               ].map((tab) => (
                 <TabsTrigger
                   key={tab.value}
                   value={tab.value}
-                  className="flex items-center justify-center data-[state=active]:bg-amber-600 data-[state=active]:text-white"
+                  className="flex items-center justify-center py-3 data-[state=active]:bg-amber-600 data-[state=active]:text-white flex-col gap-1"
                 >
-                  <span className="hidden md:flex items-center">
+                  <span className="flex items-center justify-center md:hidden mb-1">
                     {tab.icon}
+                  </span>
+                  <span className="text-xs md:text-sm whitespace-nowrap md:flex md:items-center">
+                    <span className="hidden md:inline mr-2">{tab.icon}</span>
                     {tab.label}
                   </span>
-                  <span className="md:hidden flex items-center">{tab.icon}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -365,35 +367,35 @@ export default function AboutPageContent() {
                   title: "Strategic Investment",
                   content:
                     "Our strategic investment approach combines deep market analysis with innovative financial solutions to maximize returns and minimize risks for our clients.",
-                  image: "https://img.freepik.com/free-photo/investment-business-budget-credit-costs-concept_53876-13720.jpg?t=st=1746706482~exp=1746710082~hmac=f65fd7a0b9e83723335255ebd53038002f8da60798021870c52b35bd8438c597&w=1800",
+                  image: "/close-up-pen-with-tablet-table.jpg",
                 },
                 {
                   value: "success",
                   title: "Proven Success",
                   content:
                     "With a track record of successful investments and business transformations, we bring proven methodologies and results-driven strategies to every engagement.",
-                  image: "https://img.freepik.com/free-photo/man-saving-money-energy-crisis_23-2150061849.jpg?t=st=1746706605~exp=1746710205~hmac=834b793427bee260cab0b80c87b7c7fc32ed27d3ba6a53243a500b23c9389db2&w=1380",
+                  image: "/front-view-stacked-coins-with-dirt-plant.jpg",
                 },
                 {
                   value: "expertise",
                   title: "Industry Expertise",
                   content:
                     "Our team of seasoned professionals brings decades of combined experience across various industries, ensuring deep insights and informed decision-making.",
-                  image: "https://img.freepik.com/free-photo/3d-background-children-with-castle_23-2150499381.jpg?t=st=1746706686~exp=1746710286~hmac=958a5e7365b53c76814372bec2ffc97ab73587c4698498296dffa143196fd208&w=1800",
+                  image: "/person-office-analyzing-checking-finance-graphs.jpg",
                 },
                 {
                   value: "solutions",
                   title: "Tailored Solutions",
                   content:
                     "We understand that every business is unique. Our solutions are customized to meet your specific needs, challenges, and growth objectives.",
-                  image: "https://img.freepik.com/free-photo/front-view-stacked-coins-with-dirt-plant_23-2148803904.jpg?t=st=1746706549~exp=1746710149~hmac=eb14c97ae57770c948a0348e74d1c38a1cec4972fd80255c968e96237a5b335f&w=900",
+                  image: "/front-view-two-stacks-coins-with-jar-plants.jpg",
                 },
                 {
                   value: "network",
                   title: "Global Network",
                   content:
                     "Leverage our extensive network of industry leaders, investors, and strategic partners to access new opportunities and markets.",
-                  image: "https://img.freepik.com/free-photo/plants-with-coins-stacked-dirt-banknote_23-2148803946.jpg?t=st=1746706783~exp=1746710383~hmac=adf7b3c75b8489aa572f894954565f88f5d29643dadd3b135ebf6891c21f1e96&w=1380",
+                  image: "/payments.jpg",
                 },
               ].map((tab) => (
                 <TabsContent key={tab.value} value={tab.value} className="mt-0">

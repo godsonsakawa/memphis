@@ -84,9 +84,6 @@ export const metadata: Metadata = {
   
   // Additional verification for search consoles (add your IDs if available)
   verification: {
-    // google: "your-google-site-verification",
-    // yandex: "your-yandex-verification",
-    // bing: "your-bing-verification",
   },
   
   // Icons
