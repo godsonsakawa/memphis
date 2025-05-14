@@ -20,4 +20,4 @@ Hero section => Features => Why memphis => Process => User stories(portfolio) =>
 - forms
 - addresses
 
--> Pending Contact Functionality
+-> Pending Contact Functionality.
