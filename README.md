@@ -19,5 +19,5 @@ Hero section => Features => Why memphis => Process => User stories(portfolio) =>
 ## Contact Page
 - forms
 - addresses
--
 
+-> Pending Contact Functionality
