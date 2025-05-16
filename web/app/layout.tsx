@@ -139,68 +139,47 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Additional meta tags for SEO */}
-        <meta name="geo.region" content="KE" /> {/* Kenya */}
+        <meta name="geo.region" content="KE" />
         <meta name="geo.placename" content="Nairobi" />
         <link rel="canonical" href={baseUrl} />
-        
-        {/* Preconnect to essential domains to improve load performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Facebook Domain Verification if needed */}
-        {/* <meta name="facebook-domain-verification" content="your-verification-code" /> */}
       </head>
-      <body
-        className={`${inter.variable} ${playfair.variable} antialiased min-h-screen bg-background font-sans`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={`${inter.variable} ${playfair.variable} antialiased min-h-screen bg-background font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Navbar />
-          <main className="relative">
-            {children}
-          </main>
+          <main className="relative">{children}</main>
           <Footer />
         </ThemeProvider>
-        
-        {/* Structured data for rich search results */}
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Memphis Capital",
-              "url": baseUrl,
-              "logo": `${baseUrl}/memphislogo.png`,
-              "sameAs": [
-                "https://www.linkedin.com/company/memphis-capital",
-                "https://twitter.com/memphiscapital"
-                // Add other social profiles here
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+254-733-900-225",
-                "contactType": "customer service",
-                "areaServed": "East Africa",
-                "availableLanguage": ["English", "Swahili"]
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Western Heights",
-                "addressLocality": "Westlands",
-                "addressRegion": "Nairobi",
-                "postalCode": "",
-                "addressCountry": "KE"
-              },
-              "description": "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive sustainable growth across East Africa."
-            })
-          }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Memphis Capital",
+            "url": baseUrl,
+            "logo": `${baseUrl}/memphislogo.png`,
+            "sameAs": [
+              "https://www.linkedin.com/company/memphis-capital",
+              "https://twitter.com/memphiscapital"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+254-733-900-225",
+              "contactType": "customer service",
+              "areaServed": "East Africa",
+              "availableLanguage": ["English", "Swahili"]
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Western Heights",
+              "addressLocality": "Westlands",
+              "addressRegion": "Nairobi",
+              "postalCode": "",
+              "addressCountry": "KE"
+            },
+            "description": "Leading advisory firm specializing in Business Strategy, Capital Sourcing, and Market Research to empower businesses and drive sustainable growth across East Africa."
+          })
+        }} />
       </body>
     </html>
   );

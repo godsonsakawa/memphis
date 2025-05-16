@@ -8,6 +8,12 @@ import { FileCheck } from "lucide-react";
 const testimonials = [
   {
     quote:
+      "Partnering with this team helped us reduce supplier payment delays by over 90% and boost trust across our supply chain. Their blockchain expertise turned a major operational challenge into a competitive advantage.",
+    author: "CEO",
+    company: "ZETU",
+  },
+  {
+    quote:
       "Memphis Capital has been a game-changer for our business. Their investment and strategic guidance helped us scale faster than we ever imagined. Beyond funding, they provided invaluable insights that refined our business model.",
     author: "Co-Founder & CEO",
     company: "Carogiv Limited",
@@ -47,7 +53,7 @@ export function TestimonialsSection() {
             className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 text-sm font-medium mb-8"
           >
             <FileCheck className="w-4 h-4 mr-2" />
-            Client Success Stories
+            <span>Client Success Stories</span>
           </motion.div>
           
           <motion.h2
@@ -56,7 +62,7 @@ export function TestimonialsSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Trusted by Industry Leaders
+            <span>Trusted by Industry Leaders</span>
           </motion.h2>
           
           <motion.p
@@ -65,12 +71,12 @@ export function TestimonialsSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            See how our services have transformed businesses across industries
+            <span>See how our services have transformed businesses across industries</span>
           </motion.p>
         </div>
         
         {/* Premium testimonial cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -82,16 +88,20 @@ export function TestimonialsSection() {
             >
               {/* Premium card design */}
               <div className="h-full rounded-xl overflow-hidden border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-1">
-                <div className="h-full rounded-lg bg-white/[0.02] p-8 backdrop-blur-sm relative">
+                <div className="h-full rounded-lg bg-white/[0.02] p-6 backdrop-blur-sm relative">
                   <div className="absolute top-4 left-4 text-4xl text-primary/20 font-serif">"</div>
                   
-                  <p className="relative text-white/90 mb-8 italic pt-6">
-                    {testimonial.quote}
+                  <p className="relative text-white/90 mb-6 italic pt-6 text-sm">
+                    <span>{testimonial.quote}</span>
                   </p>
                   
                   <div className="mt-auto border-t border-white/10 pt-4">
-                    <p className="font-medium text-white">{testimonial.author}</p>
-                    <p className="text-white/70">{testimonial.company}</p>
+                    <p className="font-medium text-white text-sm">
+                      <span>{testimonial.author}</span>
+                    </p>
+                    <p className="text-white/70 text-sm">
+                      <span>{testimonial.company}</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -106,7 +116,9 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20 rounded-2xl border border-white/10 bg-white/[0.02] p-10"
         >
-          <p className="text-center text-sm text-white/50 uppercase tracking-wider mb-8">Trusted by leading organizations</p>
+          <p className="text-center text-sm text-white/50 uppercase tracking-wider mb-8">
+            <span>Trusted by leading organizations</span>
+          </p>
           
           <div className="flex flex-wrap items-center justify-center gap-12 opacity-70">
             {/* Placeholder for client logos */}

@@ -214,6 +214,25 @@ export function Navbar() {
 
             {/* Action Buttons */}
             <div className="flex items-center space-x-5">            
+              <Link href="https://zetu-supplychain.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <motion.button
+                  variants={{
+                    expanded: {
+                      paddingLeft: "24px",
+                      paddingRight: "24px",
+                    },
+                    compact: {
+                      paddingLeft: "20px",
+                      paddingRight: "20px",
+                    }
+                  }}
+                  className="bg-transparent border border-primary text-primary hover:bg-primary/10 rounded-full py-2.5 font-medium text-sm transition-all hover:shadow-lg hover:shadow-primary/20"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Explore Zetu
+                </motion.button>
+              </Link>
               
               <Link href="/contact">
                 <motion.button
@@ -351,8 +370,14 @@ export function Navbar() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="pt-8 mt-8 border-t border-border/40"
+                    className="pt-8 mt-8 border-t border-border/40 space-y-4"
                   >
+                    <Link href="https://zetu-supplychain.vercel.app/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+                      <button className="w-full bg-transparent border border-primary text-primary hover:bg-primary/10 py-4 px-6 rounded-md font-medium flex items-center justify-center">
+                        Explore Zetu
+                        <ArrowRight size={16} className="ml-2" />
+                      </button>
+                    </Link>
                     <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                       <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 px-6 rounded-md font-medium flex items-center justify-center">
                         Get Started
