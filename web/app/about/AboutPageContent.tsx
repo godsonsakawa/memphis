@@ -646,7 +646,7 @@ export default function AboutPageContent() {
           viewport={{ once: true }}
         >
           <Image
-            src="/placeholder.svg?height=600&width=1200&text=Memphis+Capital"
+            src="/Remittance.jpg"
             alt="Memphis Capital"
             width={1200}
             height={600}
@@ -654,7 +654,7 @@ export default function AboutPageContent() {
           />
 
           <div className="absolute inset-0 bg-[#0a1428]/90"></div>
-          <div className="absolute inset-0 border border-amber-500/20 rounded-2xl"></div>
+          <div className="absolute inset-clea0 border border-amber-500/20 rounded-2xl"></div>
 
           <div className="relative px-8 py-16 md:py-24 max-w-4xl mx-auto text-center">
             <motion.h2
