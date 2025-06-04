@@ -17,14 +17,14 @@ export function HeroSection() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.3 }}
+          style={{ opacity: 0.2 }}
         >
           <source src="/memphiscapital.mp4" type="video/mp4" />
         </video>
       </div>
       
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/20" />
       
       {/* Content container */}
       <div className="container relative z-10 mx-auto px-4">
