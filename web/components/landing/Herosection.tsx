@@ -9,16 +9,19 @@ import { useState, useEffect } from "react"
 export function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex items-center pt-24 pb-16">
-      {/* Background image - using a simpler approach without fixed positioning */}
-      <div 
-        className="absolute inset-0" 
-        style={{
-          backgroundImage: "url('/person-office-analyzing-checking-finance-graphs.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.3, // Explicitly set opacity
-        }}
-      />
+      {/* Background video - using a simpler approach without fixed positioning */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: 0.3 }}
+        >
+          <source src="/memphiscapital.mp4" type="video/mp4" />
+        </video>
+      </div>
       
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70" />
