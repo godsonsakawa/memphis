@@ -78,7 +78,7 @@ export default function AboutPageContent() {
               </h1>
 
               <p className="text-xl text-slate-300 leading-relaxed max-w-xl">
-                Your strategic partner for business growth and financial excellence in Kenya and beyond.
+              We help African founders raise growth capital and get investor-ready. From strategy to execution, we support businesses through every step of the capital-raising process with clear models and credible plans.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">

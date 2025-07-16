@@ -62,8 +62,9 @@ export function HeroSection() {
             ></motion.div>
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-10">
-              End-to-end Business Strategy, Capital Sourcing & Market Intelligence—driving your growth with precision,
-              expertise, and proven methodologies.
+            We help ambitious African founders raise growth capital - with precision, clarity, and momentum.
+            From financial modeling to investor readiness, we turn bold ideas into fundable strategies.
+
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
@@ -73,7 +74,7 @@ export function HeroSection() {
                   whileTap={{ scale: 0.97 }}
                   className="px-8 py-4 bg-primary text-primary-foreground rounded-md font-medium flex items-center gap-2 shadow-lg shadow-primary/20"
                 >
-                  Schedule a Consultation
+                  Book your strategy call
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
               </Link>
