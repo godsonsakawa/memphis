@@ -17,28 +17,28 @@ const services = [
     id: "strategy",
     icon: TrendingUp,
     title: "Business Strategy",
-    description: "Transform challenges into opportunities with our data-driven strategic guidance, focusing on sustainable growth and market positioning.",
+    description: "Transform your vision into an investor-ready strategy. We help African founders position for growth, defend valuations, and build companies that scale across emerging markets.",
     link: "/services#business-strategy"
   },
   {
     id: "sourcing",
     icon: DollarSign,
     title: "Capital Sourcing",
-    description: "Access our extensive network of investors and funding solutions tailored precisely to your unique growth needs and financial structure.",
+    description: "Access our curated network of Africa-focused investors and funding solutions. From seed to Series A, we connect you with capital partners who understand your market and back your vision.",
     link: "/services#capital-sourcing"
   },
   {
     id: "advisory",
     icon: Handshake,
     title: "Transaction Advisory",
-    description: "Receive expert guidance throughout the entirety of your transaction lifecycle, from initiation to successful post-merger integration.",
+    description: "Navigate your funding journey with confidence. Expert guidance from pitch deck to term sheet, ensuring you raise right and maintain control of your growth story.",
     link: "/services#transaction-advisory"
   },
   {
     id: "research",
     icon: Search,
     title: "Market Research",
-    description: "Gain critical competitive advantages with our in-depth market intelligence, trend analysis, and customer insights.",
+    description: "Gain competitive advantage with deep African market intelligence. Customer insights, trend analysis, and market positioning strategies that turn local knowledge into funding leverage",
     link: "/services#market-research"
   },
 ];
@@ -68,7 +68,7 @@ const ServicesSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold mb-6 text-white"
           >
-            Specialized Expertise for Exceptional Results
+            Strategy. Capital. Execution
           </motion.h2>
           
           <motion.p
@@ -77,7 +77,7 @@ const ServicesSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg text-white/70 max-w-3xl mx-auto"
           >
-            Our comprehensive suite of services is designed to help you navigate complex business challenges and accelerate sustainable growth.
+            We help African founders raise smart capital and build with precision through:
           </motion.p>
         </div>
 
@@ -129,14 +129,14 @@ const ServicesSection = () => {
         
         {/* View all services button */}
         <div className="mt-12 text-center">
-          <Link href="/services">
+          <Link href="/contact">
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-md font-medium hover:bg-white/5 transition-colors"
             >
-              View All Services
+              Book your strategy call
             </motion.button>
           </Link>
         </div>

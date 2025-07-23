@@ -55,7 +55,7 @@ export function CaseStudiesSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Transforming Supply Chain Finance
+            WE DON’T JUST ADVISE - WE BUILD
           </motion.h2>
           
           <motion.p
@@ -64,8 +64,9 @@ export function CaseStudiesSection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            See how our strategic advisory and financial expertise helped revolutionize 
-            East African supply chains through innovative blockchain solutions
+            While helping African founders navigate capital challenges, we identified a $15 billion financing gap in supply chain finance.
+            So, we’re building the solution.
+
           </motion.p>
         </div>
         
@@ -85,11 +86,10 @@ export function CaseStudiesSection() {
                 </div>
                 
                 <p className="text-white/80 mb-8">
-                  ZETU is revolutionizing supply chain finance in East Africa through blockchain technology, 
-                  enabling instant payments to suppliers and addressing the $15B financing gap for SMEs.
+                Meet Zetu - our blockchain-powered platform delivering same-day payments to suppliers across East Africa.
                 </p>
                 
-                <h4 className="text-lg font-medium text-white mb-4">What ZETU Does:</h4>
+                <h4 className="text-lg font-medium text-white mb-4">About ZETU:</h4>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start gap-3">
@@ -97,7 +97,7 @@ export function CaseStudiesSection() {
                       <Zap className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-white/90">
-                      <span className="font-medium text-white">Instant Payments to Suppliers:</span> Ensures suppliers get paid same-day, not weeks or months later.
+                      <span className="font-medium text-white">The Problem:</span> 35,000 + SMEs slowed down by 30-90 day payment cycles.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -105,7 +105,7 @@ export function CaseStudiesSection() {
                       <Shield className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-white/90">
-                      <span className="font-medium text-white">Blockchain Verification:</span> Uses smart contracts to confirm delivery and provide immutable proof.
+                      <span className="font-medium text-white">Our Solution:</span> Instant supplier payments, verified through smart contracts
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -113,7 +113,7 @@ export function CaseStudiesSection() {
                       <DollarSign className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-white/90">
-                      <span className="font-medium text-white">Flat Fee Structure:</span> Charges just a 5% flat fee, significantly lower than traditional financing (15–30%).
+                      <span className="font-medium text-white">The Market:</span> $4.2B annual opportunity in East Africa alone.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -121,7 +121,7 @@ export function CaseStudiesSection() {
                       <BarChart4 className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-white/90">
-                      <span className="font-medium text-white">Low Threshold Access:</span> Suppliers can start with invoice sizes as small as $1,000, unlike competitors requiring $5,000+.
+                      <span className="font-medium text-white"> * </span> Zetu represents Memphis Capital’s commitment to not only identifying market gaps but also filling them. Because founders don’t need more theory. They need systems that work.
                     </span>
                   </li>
                 </ul>

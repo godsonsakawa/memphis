@@ -1,9 +1,11 @@
 import { HeroSection } from "@/components/landing/Herosection";
+import { ProofCredibilityStrip } from "@/components/landing/ProofCredibilityStrip";
 import ServicesSection from "@/components/landing/Features";
 import { WhyMemphisSection } from "@/components/landing/Why";
 import { ProcessSection } from "@/components/landing/Process";
 import { CTASection } from "@/components/landing/CTASection";
 import { CaseStudiesSection } from "@/components/landing/CaseStudies";
+import { SocialProofSection } from "@/components/landing/SocialProofSection";
 
 export default function Home() {
   return (
@@ -29,8 +31,10 @@ export default function Home() {
 
       {/* Main content sections */}
       <HeroSection />
+      <ProofCredibilityStrip />
       <ServicesSection />
       <WhyMemphisSection />
+      <SocialProofSection />
       <ProcessSection />
       <CaseStudiesSection />
       <div className="container mx-auto px-4 py-24">

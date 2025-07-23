@@ -62,7 +62,14 @@ export function WhyMemphisSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg text-white/70"
           >
-            We combine industry expertise with an entrepreneurial mindset to deliver exceptional results for ambitious businesses.
+            Africa’s future is being built now. And founders shouldn’t have to figure it out alone. We blend deep market insight, structured capital strategy, and an operator’s mindset to help you scale without second-guessing.
+
+            Strategy-first, always. We don’t just introduce you to capital - we help you shape a strategy that attracts it.
+
+            Investor-grade materials. From your pitch to your model, everything speaks your value and scales your credibility.
+
+            Founder-focused process. Structured, honest, and built to move with momentum.
+
           </motion.p>
         </div>
 
