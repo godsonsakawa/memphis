@@ -17,7 +17,7 @@ export function HeroSection() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.2 }}
+          style={{ opacity: 0.6 }}
         >
           <source src="/memphiscapital.mp4" type="video/mp4" />
         </video>
